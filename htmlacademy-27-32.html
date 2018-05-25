@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Испытание: строим сетку</title>
+		<meta charset="utf-8">
+		<style>
+		/* Используемые цвета: #34495e – мокрый асфальт, #c0392b – красный, #3498DB – синий */
+			html,body { margin: 0; padding: 0; }
+			body {
+				width: 450px;
+				height: 335px;
+				font-family: "Arial", sans-serif;
+				font-size: 10px;
+				color: white;
+			}
+		
+		/******* Универсальные вспомогательные классы: *******/
+			.clearfix {
+				content:"";
+				display:table;
+				clear:both;
+			}
+			.centered {
+				width: 350px;
+				margin: 0 auto;
+			}
+			.content {
+				padding: 5px;
+			}
+		/*****************************************************/
+
+			.site-wrapper {
+				padding:10px 0;
+				width: 450px;
+				background: #34495e;
+			}
+
+			.header {
+				margin-bottom: 10px;    
+				min-height: 35px;
+				background: #c0392b;
+			}
+
+			.menu-wrapper {
+				background: #3498DB;
+				margin-bottom: 10px;
+			}
+			.menu {
+				min-height: 35px;
+			/*  margin-bottom: 10px; получается что вертикальный отступ (не только верхний) "выпадает" и передаётся родительскому элементу... */
+			}
+
+			.promo {
+				margin-bottom: 10px;    
+			}
+			.layout-promo-item {
+				float:left;
+				width: 170px;
+				background: #c0392b;
+				margin-right: 10px;
+				min-height: 60px;
+			}
+			.promoitem2 {
+				margin-right:0;
+			}
+
+			.main-bg {
+				background: white;
+				padding: 10px 0;
+			}
+			.main-item {
+				background: #3498DB;
+				float:left;
+				margin-right: 10px;
+				min-height: 110px;
+			}
+			.item1 {
+				width: 70px;
+			}
+			.item2 {
+				width: 190px;
+			}
+			.item3 {
+				width: 70px;
+				margin-right:0;
+			}
+
+			.footer .content {
+				min-height: 30px;
+			}
+
+
+		</style>
+	</head>
+	
+    <body>
+    <div class="site-wrapper">
+        
+        <div class="header centered">
+            <div class="content">
+                Header
+            </div>
+        </div>
+
+        <div class="menu-wrapper">
+            <div class="menu centered">
+                <div class="content">
+                    Menu
+                </div>
+            </div>
+        </div>
+
+        <div class="promo centered clearfix">
+            <div class="layout-promo-item">
+                <div class="content">
+                    Promo 1
+                </div>
+            </div>
+            <div class="layout-promo-item promoitem2">
+                <div class="content">
+                    Promo 2
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-bg">
+            <div class="centered clearfix">
+                <div class="main-item item1">
+                    <div class="content">
+                        Left
+                    </div>
+                </div>
+                <div class="main-item item2">
+                    <div class="content">
+                        Main
+                    </div>
+                </div>
+                <div class="main-item item3">
+                    <div class="content">
+                        Right
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer centered">
+            <div class="content">
+                Footer
+            </div>
+		</div>
+
+    </div><!-- /wrapper	-->
+    </body>
+</html>
