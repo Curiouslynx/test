@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Разделы страницы. Теги article и section</title>
+        <meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				color: white;
+				background-color: #2c3e50;
+			}
+			pre	{font:12pt Tahoma;}
+			/* Header */
+			header.page-header {
+				position: relative;
+				z-index: 5;
+				min-height: 20px;
+				padding: 20px;
+				color: white;
+				background-image:
+					linear-gradient(45deg, #34495e 25%, transparent 25%),
+					linear-gradient(-45deg, #34495e 25%, transparent 25%),
+					linear-gradient(135deg, #34495e 25%, transparent 25%),
+					linear-gradient(-135deg, #34495e 25%, transparent 25%);
+				background-position: 10px 0, 10px 0, 0 0, 0 0;
+				background-size: 20px 20px;
+				box-shadow: 0 0 5px 0 #333333;
+			}
+
+			/* Main */
+			main {
+				display: block; /* для страховки, очень новый элемент */
+				min-height: 200px;
+				padding-top: 50px;
+				color: black;
+				background-color: white;
+				background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
+			}
+
+			main::after {
+				content: "";
+
+				display: table;
+				clear: both;
+			}
+
+			.about-me {
+				min-height: 100px;
+				margin: 0 20px;
+				padding: 10px;
+				background-color: rgba(241, 196, 15, 0.1);
+				border-radius: 5px;
+				box-shadow: 0 0 3px #cccccc;
+			}
+
+			.posts {
+				min-height: 50px;
+				margin: 20px 0;
+				padding: 20px;
+				background: #f5f5f5;
+				box-shadow: 0 0 5px #cccccc;
+			}
+
+			/* Footer */
+			footer.page-footer {
+				min-height: 50px;
+				padding: 20px;
+				font-size: 14px;
+				color: black;
+				background-color: #f1c40f;
+				background-image:
+					linear-gradient(45deg, transparent 50%, white 50%),
+					linear-gradient(-45deg, transparent 50%, white 50%),
+					linear-gradient(135deg, transparent 50%, #2c3e50 50%),
+					linear-gradient(-135deg, transparent 50%, #2c3e50 50%);
+				background-repeat: repeat-x;
+				background-position: 0 0, 0 0, 0 100%, 0 100%;
+				background-size: 10px 12px;
+			}		
+		</style>
+    </head>
+    <body>
+        <header class="page-header">
+            Хедер
+        </header>
+        <main>
+            <article class="about-me">Обо мне</article>
+            <section class="posts">Последние посты</section>
+<pre>		
+	Разделы страницы. Теги article и section [3/19]
+
+	С шапками, подвалами и основным содержанием разобрались. Теперь перейдём к остальным разделам сайта.
+
+	Раньше почти все разделы верстались на дивах. Но в HTML5 добавили сразу два новых тега для разметки разделов:
+
+		&lt;section&gt; — смысловой или логический раздел документа;
+		&lt;article&gt; — самостоятельный и независимый раздел документа.
+
+	Чтобы не было путаницы, разберём где и когда использовать разные контейнеры:
+
+		&lt;div&gt; — контейнер общего назначения, не обязательно смысловой. Дивы используются для разметки мелких блоков,
+			создания сетки и декоративных эффектов.
+		&lt;section&gt; — более крупный логический контейнер, объединяющий содержание по смыслу. Например, блок «О компании»,
+			список товаров, раздел личной информации в профиле и так далее.
+		&lt;article&gt; — самостоятельный, цельный и независимый раздел документа. Этот раздел можно в неизменном виде
+			использовать в различных местах, в том числе и на других сайтах. Примеры: статья, пост в блоге, сообщение на форуме и так далее.
+
+	В этом задании мы сверстаем блок «Обо мне» как независимый раздел, который можно будет использовать в разных местах сайта.
+	А список постов — это логический раздел, группирующий последние посты, поэтому для него используем &lt;section&gt;.
+</pre>			
+        </main>
+        <footer class="page-footer">
+            Футер
+        </footer>
+    </body>
+</html>
